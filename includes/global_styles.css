@@ -1,0 +1,419 @@
+/* Global Styles for Car Website */
+:root {
+  --primary-color: #3563E9;
+  --secondary-color: #90A3BF;
+  --accent-color: #FF4423;
+  --light-gray: #F6F7F9;
+  --dark-gray: #1A202C;
+  --white: #FFFFFF;
+  --black: #000000;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+  --radius: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark-gray);
+  background-color: var(--light-gray);
+  line-height: 1.6;
+}
+
+.main {
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Card Styles */
+.card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Button Styles */
+.btn {
+  border-radius: 8px;
+  padding: 8px 20px;
+  font-weight: 600;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: #2a4eb7;
+  border-color: #2a4eb7;
+}
+
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-accent {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  color: var(--white);
+}
+
+.btn-accent:hover {
+  background-color: #e33a1c;
+  border-color: #e33a1c;
+}
+
+/* Car and Brand Cards */
+.car-grid,
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+  padding: 20px 0;
+}
+
+.car-card,
+.brand-card {
+  border-radius: var(--radius);
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.car-card:hover,
+.brand-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.car-image {
+  height: 220px;
+  background-size: cover;
+  background-position: center;
+}
+
+.car-info {
+  padding: 20px;
+}
+
+.car-price {
+  font-weight: bold;
+  color: var(--accent-color);
+  font-size: 1.2rem;
+}
+
+.car-brand {
+  color: var(--secondary-color);
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.brand-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.brand-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin: 0 auto 20px;
+}
+
+.brand-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.brand-description {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  height: 80px;
+  overflow: hidden;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--dark-gray);
+  color: var(--white);
+  padding: 50px 0 20px;
+  margin-top: 50px;
+}
+
+.footer h4 {
+  color: var(--white);
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.footer p {
+  color: var(--secondary-color);
+}
+
+.footer a {
+  color: var(--light-gray);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer-social img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* Forms */
+.form-control {
+  border-radius: 8px;
+  padding: 10px 15px;
+  border: 1px solid #e2e8f0;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(53, 99, 233, 0.25);
+}
+
+/* Search Section */
+.search-section {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+  margin-bottom: 30px;
+}
+
+/* Messages */
+.message-container {
+  margin-top: 80px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.message {
+  padding: 12px 24px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  text-align: center;
+  width: fit-content;
+  box-shadow: var(--shadow);
+  max-width: 80%;
+  font-weight: 500;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border-left: 5px solid #28a745;
+}
+
+.error {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 5px solid #dc3545;
+}
+
+.info {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border-left: 5px solid #17a2b8;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .car-grid,
+  .brands-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  .search-section {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .car-grid,
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cart styles */
+.cart-container {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  padding: 30px;
+  box-shadow: var(--shadow);
+}
+
+.cart-item {
+  border-bottom: 1px solid #e2e8f0;
+  padding: 20px 0;
+}
+
+.cart-item:last-child {
+  border-bottom: none;
+}
+
+.item-image {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.item-price {
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+.cart-summary {
+  background-color: var(--white);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+/* Admin panel styles */
+.admin-sidebar {
+  background-color: var(--dark-gray);
+  min-height: 100vh;
+  color: var(--white);
+  padding-top: 20px;
+}
+
+.admin-sidebar .nav-link {
+  color: var(--secondary-color);
+  padding: 12px 20px;
+  border-radius: 0;
+  transition: var(--transition);
+}
+
+.admin-sidebar .nav-link:hover,
+.admin-sidebar .nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.admin-sidebar .nav-link.active {
+  border-left: 4px solid var(--primary-color);
+}
+
+.admin-content {
+  padding: 30px;
+}
+
+.admin-card {
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.admin-stats {
+  text-align: center;
+  padding: 30px 15px;
+}
+
+.admin-stats h3 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.admin-table th {
+  background-color: var(--light-gray);
+}
+
+/* Auth pages */
+.auth-container {
+  max-width: 450px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: var(--white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.auth-logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.auth-divider {
+  text-align: center;
+  margin: 20px 0;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  display: inline-block;
+  width: 40%;
+  height: 1px;
+  background-color: #e2e8f0;
+  position: absolute;
+  top: 50%;
+}
+
+.auth-divider::before {
+  left: 0;
+}
+
+.auth-divider::after {
+  right: 0;
+}
+
+.auth-social {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.auth-social-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e2e8f0;
+  background-color: var(--white);
+  transition: var(--transition);
+}
+
+.auth-social-btn:hover {
+  background-color: var(--light-gray);
+} 

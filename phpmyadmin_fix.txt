@@ -1,0 +1,38 @@
+How to Fix the Brand Logo Issue Using phpMyAdmin
+
+The error you're seeing happens because the code is trying to use a column named 'brand_logo' that doesn't exist in your brands table. Here's how to fix it using phpMyAdmin:
+
+1. Open XAMPP Control Panel and make sure Apache and MySQL are running
+2. Click on the "Admin" button next to MySQL (or go to http://localhost/phpmyadmin/)
+3. In phpMyAdmin, click on your database name "cars_data" in the left sidebar
+4. Click on the "brands" table
+5. Click on the "Structure" tab
+6. Click on "Add column" 
+7. Enter the following information:
+   - Name: brand_logo
+   - Type: VARCHAR
+   - Length/Values: 255
+   - Default: NULL
+   - Collation: [leave empty]
+   - Attributes: [leave empty]
+   - Null: check the box
+   - Index: [leave empty]
+   - A_I: [leave empty]
+   - Comments: [leave empty]
+8. Click "Save"
+
+Alternative: Direct SQL Method
+1. In phpMyAdmin, select your database "cars_data"
+2. Click on the "SQL" tab
+3. Paste this exact SQL command:
+   ```sql
+   ALTER TABLE brands ADD COLUMN brand_logo VARCHAR(255) NULL AFTER description;
+   ```
+4. Click "Go" to execute the query
+
+After adding the column, make sure your uploads/brand_logos directory exists:
+1. Navigate to your website directory: C:\xampp\htdocs\cars\home_page\
+2. Create a folder named "uploads" if it doesn't exist
+3. Inside the uploads folder, create another folder named "brand_logos"
+
+Now you should be able to add brands with logos without getting the error. 

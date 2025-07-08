@@ -1,0 +1,46 @@
+.view_box{
+    border: 1px solid none;
+    display: flex;
+    width: 100%;
+    height: 900px;
+    padding-top: 90px;
+}
+.view_subbox1{
+    border: 1px solid none;
+    width: 50%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.view_subbox2{
+    border: 1px solid none;
+    width: 50%;
+    height: 810px;
+}
+.view_subbox1 img{
+    width: 80%;
+    height: 80%;
+}
+tr td{
+    border: 2px solid gray;
+}
+.view_subbox2 h2{
+    padding-top: 30px;
+}
+.view_subbox2 p{
+    color: rgb(42, 41, 41);
+}
+.add_cart,.view_cart{
+    border-radius: 5px;
+    border: 2px solid #8a2be2;
+    background-color: #8a2be2;
+    color: white;
+    width: 20%;
+    height: 40px;
+}
+td{
+    width: 30%;
+    height: 100px;
+    text-align: center;
+}
